@@ -187,10 +187,6 @@ public class WriterOutputStreamTest {
         assertEquals(testString, writer.toString());
     }
     @Test
-	private void testWithSingleByteWriteOutWrite(final byte b){
-	    out.write(b);
-	}
-    @Test
     private void testWithSingleByteWrite(final String testString, final CharsetDecoder charsetDecoder) throws IOException {
         final byte[] bytes = testString.getBytes(CharsetDecoders.toCharsetDecoder(charsetDecoder).charset());
         final StringWriter writer = new StringWriter();
@@ -201,11 +197,6 @@ public class WriterOutputStreamTest {
         }
         assertEquals(testString, writer.toString());
     }/*-------------------------------*/
-    
-    @Test
-    private void testWithSingleByteWriteOutWrite(final byte b) {
-         out.write(b);
-    }/*---------------------------------*/
     
     @Test
     private void testWithSingleByteWrite(final String testString, final String charsetName) throws IOException {
